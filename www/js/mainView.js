@@ -12,10 +12,9 @@ define(function (require) {
       this.$('#header').html(this.headerView.render().el);
 
       var InfoModel = require("./models/infoModel");
-      var infoModel = new InfoModel();
-      this.footerView = new FooterView({main: this, info: infoModel});
+      this.footerView = new FooterView({main: this, info: InfoModel.singleton()});
       this.$('#footer').html(this.footerView.render().el);
-      infoModel.fetch({               
+      InfoModel.singleton().fetch({               
         success: function(d){
         },
         error: function(m, r){

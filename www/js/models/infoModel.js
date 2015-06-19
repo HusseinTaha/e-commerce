@@ -18,6 +18,11 @@ define(function (require) {
             linkedin: "",
             google: ""
           },
+          location:{
+            longitude: 0.0,
+            latitude: 0.0
+          },
+          fullAddress:"",
           address: "",
           phone: "",
           email: ""
@@ -30,6 +35,15 @@ define(function (require) {
       this.urlRoot = config.apiUrl + "/info";
     }
   });
+
+  var singleton;
+
+  InfoModel.singleton = function(){
+    if(!singleton){
+      singleton = new InfoModel();
+    }
+    return singleton;
+  };
 
   return InfoModel;
 

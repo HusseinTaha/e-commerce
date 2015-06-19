@@ -11,6 +11,14 @@ define(function (require) {
         this.main = options.main;
       },
 
+      events: {
+        "click .navbar-collapse a:not(.dropdown-toggle)": "addNavBarHandler"
+      },
+
+      addNavBarHandler: function(){
+        $(".navbar-collapse").collapse('hide');
+      },
+
       render: function () {
           $(this.el).html(this.template());
           return this;
