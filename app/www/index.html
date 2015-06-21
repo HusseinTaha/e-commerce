@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <!-- Title here -->
+    <title>MacKart</title>
+    <!-- Description, Keywords and Author -->
+    <meta name="description" content="Your description">
+    <meta name="keywords" content="Your,Keywords">
+    <meta name="author" content="ResponsiveWebInc">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Styles -->
+    <!-- Bootstrap CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/sweetalert.css" rel="stylesheet">
+    <!-- SLIDER REVOLUTION 4.x CSS SETTINGS -->
+    <link rel="stylesheet" href="css/settings.css" media="screen" />
+    <!-- Flex slider -->
+    <link href="css/flexslider.css" rel="stylesheet">
+    <link href="css/owl.carousel.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="css/style.css" rel="stylesheet">
+    <!-- Stylesheet for Color -->
+    <link href="css/blue.css" rel="stylesheet">
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="img/favicon/favicon.png">
+  </head>
+  <body>
+    <!-- Cart, Login and Register form (Modal) -->
+    <!-- Cart Modal starts -->
+    <div class="cart-modal"></div>
+    <!--/ Cart modal ends -->
+    <!-- Login Modal starts -->
+    <div class="login-modal"></div>
+    <!--/ Login modal ends -->
+    <!-- Register Modal starts -->
+    <div class="register-modal"></div>
+    <!--/ Register modal ends -->
+    <div id="header"></div>
+    <div id="content"></div>
+    <div id="footer"></div>
+    <!-- Scroll to top -->
+    <span class="totop"><a href="#"><i class="fa fa-chevron-up"></i></a></span> 
+    <script src="libs/jquery.js"></script>
+    <script type="text/javascript" src="libs/underscore-min.js"></script>
+    <script type="text/javascript" src="libs/backbone-min.js"></script>
+    <script type="text/javascript" src="libs/sweetalert.js"></script>
+    <script type="text/javascript" src="libs/marked.js"></script>
+    <script type="text/javascript" src="libs/require.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="libs/bootstrap.min.js"></script>
+    <!-- SLIDER REVOLUTION 4.x SCRIPTS  -->
+    <script src="libs/jquery.themepunch.plugins.min.js"></script>
+    <script src="libs/jquery.themepunch.revolution.min.js"></script> 
+    <script src="libs/owl.carousel.min.js"></script> 
+    <script src="libs/filter.js"></script> 
+    <!-- Flex slider -->
+    <script src="libs/jquery.flexslider-min.js"></script> 
+    <!-- Respond JS for IE8 -->
+    <script src="libs/respond.min.js"></script>
+    <!-- HTML5 Support for IE -->
+    <script src="libs/html5shiv.js"></script>
+    <!-- Custom JS -->
+    <script src="libs/custom.js"></script>
+    <script>
+      // Revolution Slider
+      jQuery(document).ready(function() {
+          require(['js/app'], function (app) {
+              app.initialize();
+          });
+             
+      }); 
+    </script>
+  </body>
+</html>

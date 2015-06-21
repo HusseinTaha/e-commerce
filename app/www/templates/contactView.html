@@ -1,0 +1,125 @@
+<!-- Page heading starts -->
+<div class="page-head">
+   <div class="container">
+      <div class="row">
+         <div class="col-md-12">
+            <h2>Contact Us</h2>
+            <h4>something goes here</h4>
+         </div>
+      </div>
+   </div>
+</div>
+<!-- Page Heading ends -->
+<!-- Page content starts -->
+<div class="content contact-two">
+   <div class="container">
+      <div class="row">
+         <div class="col-md-6">
+            <!-- Contact form -->
+            <h4 class="title">Contact Form</h4>
+            <div class="form">
+               <!-- Contact form (not working)-->
+               <form class="form-horizontal">
+                  <!-- Name -->
+                  <div class="form-group">
+                     <label class="control-label col-md-2" for="name1">Name</label>
+                     <div class="col-md-9">
+                        <input type="text" class="form-control name-input" id="name1">
+                        <div class="alert alert-danger hidden name-error" role="alert">
+                          <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+                          <span class="sr-only">Error:</span>
+                          Please enter your name
+                        </div>
+                     </div>
+                  </div>
+                  <!-- Email -->
+                  <div class="form-group">
+                     <label class="control-label col-md-2" for="email1">Email</label>
+                     <div class="col-md-9">
+                        <input type="text" class="form-control email-input" id="email1">
+                         <div class="alert alert-danger hidden email-error" role="alert">
+                          <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+                          <span class="sr-only">Error:</span>
+                          Please enter your email
+                        </div>
+                     </div>
+                  </div>
+                  <!-- Website -->
+                  <div class="form-group">
+                     <label class="control-label col-md-2" for="website">Website</label>
+                     <div class="col-md-9">
+                        <input type="text" class="form-control website-input" id="website">
+                         <div class="alert alert-danger hidden website-error" role="alert">
+                          <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+                          <span class="sr-only">Error:</span>
+                          Please enter your website
+                        </div>
+                     </div>
+                  </div>
+                  <!-- Comment -->
+                  <div class="form-group">
+                     <label class="control-label col-md-2" for="comment">Comment</label>
+                     <div class="col-md-9">
+                        <textarea class="form-control comment-input" id="comment" rows="3"></textarea>
+                         <div class="alert alert-danger hidden comment-error" role="alert">
+                          <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+                          <span class="sr-only">Error:</span>
+                          Please enter your comment
+                        </div>
+                     </div>
+                  </div>
+                  <!-- Buttons -->
+                  <div class="form-group">
+                     <!-- Buttons -->
+                     <div class="col-md-9 col-md-offset-2">
+                        <button type="submit" class="btn btn-default submit-button">Submit</button>
+                        <button type="reset" class="btn btn-default">Reset</button>
+                     </div>
+                  </div>
+               </form>
+            </div>
+            <hr />
+            <div class="center">
+               <!-- Social media icons -->
+               <strong>Get in touch:</strong>
+               <div class="social">
+                  <a href="<%-contact.social.facebook%>" target="_blank"><i class="fa fa-facebook facebook"></i></a>
+                  <a href="<%-contact.social.twitter%>" target="_blank"><i class="fa fa-twitter twitter"></i></a>
+                  <a href="<%-contact.social.linkedin%>" target="_blank"><i class="fa fa-linkedin linkedin"></i></a>
+                  <a href="<%-contact.social.google%>" target="_blank"><i class="fa fa-google-plus google-plus"></i></a>
+                  <a href="<%-contact.social.pinterest%>" target="_blank"><i class="fa fa-pinterest pinterest"></i></a>
+               </div>
+            </div>
+         </div>
+         <div class="col-md-6">
+            <h4 class="title">Google Map</h4>
+            <!-- Google maps -->
+            <div class="gmap">
+               <!-- Google Maps. Replace the below iframe with your Google Maps embed code -->
+               <iframe height="200" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" 
+               src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBc3fjr-j0cv4ZNKXkbyO_pSGMQiEjqa3Q&q=<%-contact.location.longitude%>,<%-contact.location.latitude%>"></iframe>
+            </div>
+            <hr />
+            <!-- Address section -->
+            <h4 class="title">Address</h4>
+            <div class="address">
+               <address>
+                  <!-- Company name -->
+                  <strong>Responsive Web, Inc.</strong><br>
+                  <!-- Address -->
+                  <%=contact.fullAddress%><br>
+                  <!-- Phone number -->
+                  <abbr title="Phone">P:</abbr> <%-contact.phone%>
+               </address>
+               <address>
+                  <!-- Name -->
+                  <strong>Full Name</strong><br>
+                  <!-- Email -->
+                  <a href="mailto:<%-contact.email%>"><%-contact.email%></a>
+               </address>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+<!-- Page content ends -->

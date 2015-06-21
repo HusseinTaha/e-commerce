@@ -1,18 +1,25 @@
-run: web
+run: node_modules web
 	
-web:
-	(cd www; cors-proxy-cli elmst localhost 80)
+
+node_modules:
+	npm install --save  
+
+web: prepare
+	(cd app/www; cors-proxy-cli elmst localhost 80)
+
+prepare:
+	(cd app; cordova prepare)
 
 android: platformAndroid arun
 	
 arun: 
-	cordova run android
+	(cd app; cordova run android)
 
 platformAndroid:
-	cordova platform add android
+	(cd app; cordova platform add android)
 
 ios: platformiOS
-	cordova run ios
+	(cd app; cordova run ios)
 
 platformiOS:
-	cordova platform add ios
+	(cd app; cordova platform add ios)
