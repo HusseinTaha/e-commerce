@@ -2,7 +2,7 @@ define(function (require) {
   'use strict';
 
   var template = require("../text!../../templates/homeView.html");
-
+  var ItemsListView = require("../items/views/itemsListView");
 
   var HomeView = Backbone.View.extend({
 
@@ -11,7 +11,19 @@ define(function (require) {
     events: {
     },
 
-    initialize: function () {
+    initialize: function (options) {
+      this.popularCollection = options.popularCollection;
+      this.recentItems = options.recentItems;
+      this.popularItemsView = new ItemsListView({collection: this.popularCollection, type: 'items'});
+      this.recentItemsView = new ItemsListView({
+        collection: this.recentItems,
+        type: 'recent',
+        tagName: "div",
+        id: "owl-recent",
+        className: "owl-carousel"
+      });
+      this.recentItems.bind("reset change remove", this.render, this);
+
     },
 
     runSlider: function(){
@@ -51,6 +63,8 @@ define(function (require) {
 
     render: function () {
       $(this.el).html(this.template());
+      $('.items-content', this.el).append(this.popularItemsView.render().el);
+      $('.recent-item', this.el).append(this.recentItemsView.render().el);
       this.runSlider();
       this.runFlex();
       return this;

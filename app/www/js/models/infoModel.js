@@ -39,7 +39,6 @@ define(function (require) {
     },
 
     parse: function(response) {
-      console.log(response);
       if(response && response.contact && response.contact.fullAddress){
         response.contact.fullAddress = marked(response.contact.fullAddress);
       }
